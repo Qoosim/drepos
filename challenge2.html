@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coding Challenge 2</title>
+</head>
+<body>
+    <h1>Challenge 2</h1>
+    <script>
+
+        // var a = [5, 6, 7];
+        // var b = [3, 6, 10];
+        // var result = [0, 0];
+        // function compareTriplets(a, b) {
+        //     if(a[0] > b[0] || a[1] > b[1] || a[2] > b[2]) {
+        //         result[0] += 1;
+        //     }else if(a[0] < b[0] || a[1] < b[1] || a[2] < b[2]){
+        //         result[1] += 1;
+        //     }
+        //     return result;
+        // }
+        // document.write(compareTriplets(a, b)) 
+
+        
+        var A = [5, 6, 7];
+        var B = [3, 6, 10];
+        let counterA = 0,
+            counterB = 0;
+        function compareTriplets(a, b) {
+            for(let i=0;i<a.length;i++){
+                if(a[i] > b[i]){
+                    counterA++;
+                }
+                else if(a[i] < b[i]){
+                    counterB++;
+                }
+            }
+            return [counterA,counterB];
+        }
+        document.write(compareTriplets(A, B));
+    
+    </script>
+    
+</body>
+</html>

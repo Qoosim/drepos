@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grading Students</title>
+</head>
+
+<body>
+
+    <h1>Grading Students</h1>
+
+    <script>
+        var grades = [73, 67, 38, 33];
+        function gradingStudents(grades) {
+            var n = grades.length;
+            for(var i = 0; i < n; i++) {
+                if(grades[i] < 38) {
+
+                }
+                else {
+                    var remainder = grades[i] % 5;
+                    if(remainder >= 3) {
+                        grades[i] += 5 - remainder;
+                    }
+                }
+            }
+            return grades;
+        }
+        document.write(gradingStudents(grades));
+    </script>
+
+</body>
+</html>

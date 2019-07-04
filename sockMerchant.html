@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sock Merchant</title>
+</head>
+
+<body>
+
+    <h1>Sock Merchant</h1>
+
+    <script>
+        // var socks = [10, 20, 20, 10, 10, 30, 50, 10, 20];
+        // function sockMerchant(n, socks) {
+        //     socks.sort(function(a, b) {
+        //         return a - b;
+        //     });
+
+        //     var n = socks.length - 1;
+        //     var counter = 0;
+        //     for(var i = 0; i < n; i++) {
+        //         if(socks[i] === socks[i + 1]) {
+        //             counter++;
+        //             i += 1;
+        //         }
+        //     }
+        //     return counter;
+        // }
+        // document.write(sockMerchant(9, socks));
+        var ar = [10, 20, 20, 10, 10, 30, 50, 10, 20];
+        function sockMerchant(n, ar) {
+            var sortedAr = ar.sort( (a, b) => a - b);
+            var counter = 0;
+            var n = ar.length -1;
+    
+            for(var i = 0; i < n; i++) {
+                if(sortedAr[i] === sortedAr[i + 1]) {
+                    counter++;
+                    i += 1;
+                }
+            }
+            return counter;
+        }
+        document.write(sockMerchant(9, ar));
+        
+    </script>
+
+</body>
+</html>
